@@ -98,6 +98,10 @@
   .ganha strong{display:block;color:#fff;font-family:"DM Serif Display",Georgia,serif;font-weight:400;font-size:26px;line-height:1.15;margin-bottom:10px}
 
   /* download */
+  .teste{display:flex;flex-wrap:wrap;align-items:center;justify-content:space-between;gap:20px 32px;padding:26px 28px;background:var(--tinta);color:#dfe2ef;border-radius:6px}
+  .teste strong{color:#fff;font-family:"DM Serif Display",Georgia,serif;font-weight:400;font-size:28px;display:block}
+  .teste .btn{background:var(--folha);color:var(--tinta)}
+  .teste .btn:hover{background:#fff}
   .versoes{display:grid;grid-template-columns:repeat(4,1fr);border:1px solid var(--linha);border-radius:6px;overflow:hidden;background:var(--folha)}
   .versao{padding:26px 24px;border-right:1px solid var(--linha);display:flex;flex-direction:column;gap:14px}
   .versao:last-child{border-right:0}
@@ -171,11 +175,11 @@
         <span class="etiqueta">Versão de teste · gratuita</span>
         <h1>Hidráulico, sanitário e elétrico lançados a partir do seu arquitetônico.</h1>
         <p class="lead">Plugin para Revit que lê o projeto de arquitetura e monta a tubulação, o esgoto, o tratamento e os pontos elétricos seguindo as normas. Você testa de graça, conta o que deu errado, e cada versão nova sai melhor.</p>
-        <a class="btn" href="#baixar">
+        <a class="btn" href="https://github.com/studio212dev/studio212-complementares/releases/latest/download/Instalador_Studio212_Complementares.exe" download>
           <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3v12m0 0l-5-5m5 5l5-5M4 19h16"/></svg>
           Baixar grátis para Windows
         </a>
-        <p class="sub-btn">Revit 2024, 2025, 2026 e 2027 · um instalador por versão</p>
+        <p class="sub-btn">Revit 2024, 2025, 2026 e 2027 · 18 MB · sem cadastro</p>
       </div>
 
       <figure class="prancha" aria-label="Exemplo de planta de banheiro gerada pelo plugin: água fria, água quente, esgoto e pontos elétricos">
@@ -273,30 +277,15 @@
   <section class="clara" id="baixar">
     <div class="w">
       <h2>Baixar</h2>
-      <p class="intro">Escolha a versão do Revit que você usa. Cada instalador leva o template daquela versão, por isso é um arquivo por versão. Se tiver mais de uma, instale cada uma.</p>
-      <div class="versoes">
-        <div class="versao">
-          <p class="ano"><small>REVIT</small>2024</p>
-          <p class="det">~700 MB</p>
-          <a class="btn" href="https://github.com/studio212dev/studio212-complementares/releases/latest/download/Instalador_Studio212_Complementares_Revit2024.exe" download>Baixar 2024</a>
-        </div>
-        <div class="versao">
-          <p class="ano"><small>REVIT</small>2025</p>
-          <p class="det">~700 MB</p>
-          <a class="btn" href="https://github.com/studio212dev/studio212-complementares/releases/latest/download/Instalador_Studio212_Complementares_Revit2025.exe" download>Baixar 2025</a>
-        </div>
-        <div class="versao">
-          <p class="ano"><small>REVIT</small>2026</p>
-          <p class="det">~700 MB</p>
-          <a class="btn" href="https://github.com/studio212dev/studio212-complementares/releases/latest/download/Instalador_Studio212_Complementares_Revit2026.exe" download>Baixar 2026</a>
-        </div>
-        <div class="versao">
-          <p class="ano"><small>REVIT</small>2027</p>
-          <p class="det">~700 MB</p>
-          <a class="btn" href="https://github.com/studio212dev/studio212-complementares/releases/latest/download/Instalador_Studio212_Complementares_Revit2027.exe" download>Baixar 2027</a>
-        </div>
+      <p class="intro">Um instalador só, para todas as versões. Ele encontra os Revit instalados no seu computador e, durante a instalação, baixa só o template das versões que você escolher (cerca de 250 MB por versão). Deixe a internet ligada.</p>
+      <div class="teste">
+        <div><strong>Studio 212 Complementares</strong>Revit 2024, 2025, 2026 e 2027 · Windows 10 e 11 · 18 MB</div>
+        <a class="btn" href="https://github.com/studio212dev/studio212-complementares/releases/latest/download/Instalador_Studio212_Complementares.exe" download>
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3v12m0 0l-5-5m5 5l5-5M4 19h16"/></svg>
+          Baixar o instalador
+        </a>
       </div>
-      <p class="nota">Não sabe a versão? No Revit, clique no ponto de interrogação, no canto de cima, e em "Sobre o Autodesk Revit".</p>
+      <p class="nota">Os padrões de tabelas e a voz do feedback o plugin baixa sozinho, uma vez só, na primeira vez que forem usados. Sem internet na instalação, ele baixa o template no primeiro "Modelar".</p>
       <div class="avisos">
         <div>
           <h3>Ao instalar</h3>
@@ -317,8 +306,8 @@
         <ul class="req">
           <li><b>Revit</b> 2024, 2025, 2026 ou 2027</li>
           <li><b>Windows</b> 10 ou 11</li>
-          <li><b>Espaço</b> cerca de 1,5 GB por versão instalada</li>
-          <li><b>Internet</b> só para enviar o feedback. Sem internet ele fica guardado e vai sozinho depois.</li>
+          <li><b>Espaço</b> cerca de 300 MB por versão do Revit</li>
+          <li><b>Internet</b> na instalação (para o template) e para enviar o feedback. Sem internet o feedback fica guardado e vai sozinho depois.</li>
         </ul>
       </div>
       <div>
@@ -345,7 +334,7 @@
         </details>
         <details>
           <summary>Como atualizo?</summary>
-          <p>Baixe o instalador da sua versão aqui e instale por cima. Os feedbacks enviados e as suas respostas ficam guardados.</p>
+          <p>Baixe o instalador aqui e instale por cima. Ele não baixa de novo o template que você já tem, e os feedbacks e as suas respostas ficam guardados.</p>
         </details>
       </div>
     </div>
@@ -354,9 +343,9 @@
   <section class="clara final">
     <div class="w">
       <h2>Teste no seu próximo projeto</h2>
-      <a class="btn" href="#baixar">
+      <a class="btn" href="https://github.com/studio212dev/studio212-complementares/releases/latest/download/Instalador_Studio212_Complementares.exe" download>
         <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3v12m0 0l-5-5m5 5l5-5M4 19h16"/></svg>
-        Escolher a versão e baixar
+        Baixar grátis para Windows
       </a>
     </div>
   </section>
