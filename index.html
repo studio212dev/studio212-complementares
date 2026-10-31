@@ -86,7 +86,15 @@
   .faz li{margin:4px 0}
 
   /* ciclo do teste */
-  .ciclo{list-style:none;margin:0;padding:0;display:grid;grid-template-columns:repeat(4,1fr);gap:0;border:1px solid var(--linha);border-radius:6px;background:var(--folha);overflow:hidden}
+  .passos{list-style:none;margin:0;padding:0;display:grid;gap:30px;max-width:900px}
+.passos>li{display:grid;grid-template-columns:40px minmax(0,1fr);gap:20px;align-items:start}
+.passos .n{display:flex;align-items:center;justify-content:center;width:40px;height:40px;border:1.5px solid var(--cota);border-radius:50%;color:var(--cota);font:500 17px "IBM Plex Mono",monospace}
+.passos p{margin-top:6px}
+.passos .faz{margin-top:18px;gap:24px}
+.passos .faz ul{font-size:15px}
+.dica{max-width:900px;margin-top:36px;padding:16px 20px;border-left:3px solid var(--tinta);background:var(--folha);font-size:16px}
+#como-usar{border-bottom:1px solid var(--linha)}
+.ciclo{list-style:none;margin:0;padding:0;display:grid;grid-template-columns:repeat(4,1fr);gap:0;border:1px solid var(--linha);border-radius:6px;background:var(--folha);overflow:hidden}
   .ciclo li{padding:26px 24px;border-right:1px solid var(--linha);position:relative}
   .ciclo li:last-child{border-right:0}
   .ciclo .n{display:flex;align-items:center;justify-content:center;width:40px;height:40px;border:1.5px solid var(--cota);border-radius:50%;color:var(--cota);font:500 17px "IBM Plex Mono",monospace;margin-bottom:16px}
@@ -254,6 +262,28 @@
           </ul>
         </div>
       </div>
+    </div>
+  </section>
+
+  <section id="como-usar">
+    <div class="w">
+      <h2>Passo a passo no Revit</h2>
+      <p class="intro">Do arquitet&ocirc;nico aberto at&eacute; as pranchas prontas. O arquitet&ocirc;nico nunca &eacute; alterado: cada disciplina ganha um arquivo pr&oacute;prio, ao lado dele.</p>
+      <ol class="passos">
+        <li><span class="n">1</span><div><h3>Abra o seu arquitet&ocirc;nico</h3><p>Com o projeto aberto, v&aacute; na aba <b>Studio 212 - Complementares</b>. Na primeira vez, o Revit pergunta se deve carregar o plugin: clique em <b>Sempre carregar</b>. O plugin l&ecirc; os ambientes, as lou&ccedil;as e aparelhos (bacia, lavat&oacute;rio, chuveiro, pia, tanque, m&aacute;quina) e a caixa d&apos;&aacute;gua, se estiver desenhada.</p></div></li>
+        <li><span class="n">2</span><div><h3>Escolha a disciplina</h3><p>Clique em <b>Modelar hidr&aacute;ulico</b>, <b>Modelar sanit&aacute;rio</b> ou <b>Modelar el&eacute;trico</b> e confirme. O plugin salva o arquitet&ocirc;nico, cria o arquivo da disciplina pelo template Studio 212 (por exemplo &ldquo;Meu Projeto - Hidr&aacute;ulico.rvt&rdquo;) e abre esse arquivo numa <b>nova janela do Revit</b>.</p></div></li>
+        <li><span class="n">3</span><div><h3>Na janela nova, clique de novo no mesmo bot&atilde;o</h3><p>Na primeira vez ele vincula o arquitet&ocirc;nico no lugar certo e salva. Em seguida abre a janela de perguntas da disciplina.</p></div></li>
+        <li><span class="n">4</span><div><h3>Responda as perguntas e clique onde ele pedir</h3><p>O que n&atilde;o souber, deixe no autom&aacute;tico: o plugin escolhe pelo padr&atilde;o e avisa no relat&oacute;rio.</p>
+          <div class="faz">
+            <div style="--c:var(--agua)"><h3><small>Hidr&aacute;ulico</small>&Aacute;gua fria e quente</h3><ul><li>S&oacute; fria, ou fria e quente</li><li>Aquecimento solar, a g&aacute;s, el&eacute;trico ou misto</li><li>Moradores, caixa d&apos;&aacute;gua e pressurizador</li><li>Clique no modelo: cavalete e aquecedor</li></ul></div>
+            <div style="--c:var(--esgoto)"><h3><small>Sanit&aacute;rio</small>Para onde vai o esgoto</h3><ul><li>Fossa, filtro e sumidouro no lote</li><li>Biodigestor e sumidouro</li><li>Rede da cidade ou do condom&iacute;nio</li><li>Ou parar na &uacute;ltima caixa de inspe&ccedil;&atilde;o</li></ul></div>
+            <div style="--c:var(--luz)"><h3><small>El&eacute;trico</small>Quadros</h3><ul><li>Um quadro por unidade ou por pavimento</li><li>Clique no modelo: quadro e padr&atilde;o de entrada</li><li>Em branco, o plugin escolhe</li></ul></div>
+          </div></div></li>
+        <li><span class="n">5</span><div><h3>Clique em Modelar</h3><p>O plugin desenha a rede inteira: tubos dentro das paredes e no forro, registros, prumadas e press&atilde;o em cada ponto; esgoto com tubos de queda, ventila&ccedil;&atilde;o, caixas e tratamento; pontos, quadros, circuitos e eletrodutos. No fim, um relat&oacute;rio diz o que foi feito e o que conferir.</p></div></li>
+        <li><span class="n">6</span><div><h3>Detalhar e Diagramar</h3><p><b>Detalhar</b> cria plantas, isom&eacute;tricos e o detalhe de cada banheiro, cozinha e &aacute;rea de servi&ccedil;o. <b>Diagramar</b> monta as pranchas com carimbo, legenda e tabelas.</p></div></li>
+        <li><span class="n">7</span><div><h3>Conferir e mandar o feedback</h3><p><b>Conferir</b> lista o que precisa de aten&ccedil;&atilde;o (tubo em janela, ponto sem liga&ccedil;&atilde;o, caixa baixa). Viu algo errado? Use <b>Enviar feedback</b> com print, &aacute;udio ou texto.</p></div></li>
+      </ol>
+      <p class="dica"><b>Mudou o arquitet&ocirc;nico?</b> Salve o arquitet&ocirc;nico, abra o arquivo da disciplina, v&aacute; em Gerenciar v&iacute;nculos &rarr; Recarregar e rode o Modelar de novo.</p>
     </div>
   </section>
 
